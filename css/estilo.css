@@ -1,0 +1,267 @@
+
+/* Resets e Gerais*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}
+
+body,html {
+    height: 100%;
+}
+
+body {
+    width: 100vw;
+    height: 100%;
+    background-image: url(../img/fundo01.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+/* Header */
+
+
+
+header {
+    /* #170B3B */
+    background-color: #222222;
+    height: 60px !important;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 10;
+    overflow: hidden;
+    
+}
+
+.header-logo{
+    color: white;
+    border: 1px solid #ae895d;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.blue {
+    color: #ae895d;
+}
+
+.header-logo h1 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    
+}
+.header-logo a {
+    text-decoration: none;
+}
+.sidebar-icon-toggle {
+    cursor: pointer;
+    color: white;
+    margin-top: -5px;
+}
+/* Side-bar Toggle */
+
+.spinner {
+    border: 2px solid #ae895d;
+    background-color: #ae895d;
+    width: 30px;
+    margin-top: 6px;
+    border-radius: 10px;
+}
+
+.horizontal {
+    transition: all 0.4s;
+    box-sizing: border-box;
+    
+}
+.diagonal.part-1 {
+    
+    transition: all 0.4s;
+    box-sizing: border-box;
+    
+}
+.diagonal.part-2 {
+    transition: all 0.4s;
+    box-sizing: border-box; 
+}
+
+
+
+
+/* input */
+
+
+input[type=checkbox] {
+    transition: all 0.4s;
+    box-sizing: border-box;
+    display: none;
+}
+
+input[type=checkbox]:checked ~ .header > .sidebar-icon-toggle > .horizontal {
+    transition: all 0.1s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .header > .sidebar-icon-toggle > .diagonal.part-1 {
+    transition: all 0.4s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 13px;
+}
+input[type=checkbox]:checked ~ .header > .sidebar-icon-toggle > .diagonal.part-2 {
+    transition: all 0.4s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -14px;
+}
+
+input[type="checkbox"]:checked ~ #main-flex {
+    transition: 0.2s;
+    filter: blur(2px)
+}
+
+
+
+/* sidebar list */
+
+
+
+input[type="checkbox"]:checked ~ .header > #sidebar-menu {
+    transition: all 0.3s;
+    transform: translateX(0);
+    
+}
+
+
+
+#sidebar-menu {
+    height: 100%;
+    /* background: linear-gradient(180deg, #222222 0%, #0080FF 100%); */
+    background-color: #222222;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    z-index: 9;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+
+
+#sidebar-menu ul {
+    margin-top: -1px;
+    list-style: none;
+    width: 100%;
+    /* margin-left: 5px;
+    margin-right: 5px; */
+    /* display: flex;
+    flex-direction: column; */
+    
+}
+
+
+
+#sidebar-menu ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-transform: uppercase;
+    padding: 20px;
+    font-size: 0.9em;
+    border-bottom: 1px solid #151515;
+    text-align: center;
+    /* padding-right: 70px; */
+}
+
+.border-top {
+    border-top: 1px solid #151515;
+}
+
+#sidebar-menu ul li a:hover {
+    color: #ae895d;
+    border-left: 6px solid #ae895d;
+    border-radius: 2px;
+}
+
+
+/* ===== Main Site ===== */
+
+#main-flex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    margin-top: 60px;  
+}
+
+#main-flex .main-intro-logo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+#main-flex .main-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;;
+}
+
+#main-flex .main-coffee {
+    height: 100%;
+    background-color: #222222;
+    padding: 60px 30px;
+    flex: 2 1 50%;
+
+    
+}
+
+#main-flex .main-coffee h1 {
+    color: #ae895d;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#main-flex .main-coffee p {
+    color: #a4a4a4;
+    margin-bottom: 10px;
+}
+
+#main-flex figure img {
+    
+    width: 100%;
+    flex: 1 2 50%;
+    filter: sepia(0.6);
+}
+
+@media screen and (min-width: 768px) {
+    #sidebar-menu {
+        width: 25%;
+    }
+
+    #main-flex .main-coffee {
+        padding: 10%;
+    }
+}
+
+
+
+
