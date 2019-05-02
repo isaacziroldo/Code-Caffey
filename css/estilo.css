@@ -124,7 +124,7 @@ input#open-sidebar-menu:checked ~ .header > .sidebar-icon-toggle > .diagonal.par
 }
 
 input#open-sidebar-menu:checked ~ #main-flex {
-    transition: 0.2s;
+    transition: 0.1s;
     filter: blur(2px)
 }
 
@@ -204,7 +204,7 @@ input#open-sidebar-menu:checked ~ .header > #sidebar-menu {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s;
+    transition: all 0.1s;
     margin-top: 60px;  
 }
 
