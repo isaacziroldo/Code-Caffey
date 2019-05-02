@@ -99,31 +99,31 @@ header {
 /* input */
 
 
-input[type=checkbox] {
+input#open-sidebar-menu {
     transition: all 0.4s;
     box-sizing: border-box;
     display: none;
 }
 
-input[type=checkbox]:checked ~ .header > .sidebar-icon-toggle > .horizontal {
+input#open-sidebar-menu:checked ~ .header > .sidebar-icon-toggle > .horizontal {
     transition: all 0.1s;
     box-sizing: border-box;
     opacity: 0;
 }
-input[type=checkbox]:checked ~ .header > .sidebar-icon-toggle > .diagonal.part-1 {
+input#open-sidebar-menu:checked ~ .header > .sidebar-icon-toggle > .diagonal.part-1 {
     transition: all 0.4s;
     box-sizing: border-box;
     transform: rotate(135deg);
     margin-top: 13px;
 }
-input[type=checkbox]:checked ~ .header > .sidebar-icon-toggle > .diagonal.part-2 {
+input#open-sidebar-menu:checked ~ .header > .sidebar-icon-toggle > .diagonal.part-2 {
     transition: all 0.4s;
     box-sizing: border-box;
     transform: rotate(-135deg);
     margin-top: -14px;
 }
 
-input[type="checkbox"]:checked ~ #main-flex {
+input#open-sidebar-menu:checked ~ #main-flex {
     transition: 0.2s;
     filter: blur(2px)
 }
@@ -134,7 +134,7 @@ input[type="checkbox"]:checked ~ #main-flex {
 
 
 
-input[type="checkbox"]:checked ~ .header > #sidebar-menu {
+input#open-sidebar-menu:checked ~ .header > #sidebar-menu {
     transition: all 0.3s;
     transform: translateX(0);
     
