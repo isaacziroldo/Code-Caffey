@@ -194,6 +194,7 @@ input#open-sidebar-menu:checked ~ .header > #sidebar-menu {
 
 #sidebar-menu .header-footer p {
     margin: 10px;
+    color: #a4a4a4;
 }
 
 
